@@ -1,4 +1,6 @@
 # import Math Tools
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -50,7 +52,7 @@ model = models.Sequential([
 
     # first layer, 32 filters, each with 3*3 kernel, ReLU activation function,
     # L2 regularization with a coefficient of 0.001,  2*2 pool size.
-    layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 3), kernel_regularizer=l2(0.001)),
+    layers.Conv2D(64, (3, 3), activation='relu', input_shape=(28, 28, 3), kernel_regularizer=l2(0.001)),
     layers.MaxPooling2D((2, 2)),
 
     # second layer
@@ -85,12 +87,12 @@ model.compile(
 )
 
 # early stopper, if validation accuracy stop improving for 5 times，it will stop the training
-early_stopper = EarlyStopping(monitor='val_loss', patience=5)
+early_stopper = EarlyStopping(monitor='val_loss', patience=15)
 
 # train the model
 history = model.fit(
     train_images, train_labels,
-    epochs=80,  # go over the full dataset for 80 times, but it is controlled by early stop
+    epochs=50,  # go over the full dataset for 80 times, but it is controlled by early stop
     validation_data=(val_images, val_labels),
     batch_size=64,  # batch_size
     callbacks=[early_stopper]  # callback for early stopping

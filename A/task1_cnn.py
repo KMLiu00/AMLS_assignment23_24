@@ -1,12 +1,14 @@
 # import Math Tools
 import matplotlib.pyplot as plt
 import numpy as np
-
+# remove unnecessary messages from tensorflow
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 # import TensorFlow
 import tensorflow as tf
 from tensorflow.keras import layers, models
-tf.config.list_physical_devices('GPU')
+
 # import PneumoniaMNIST
 from medmnist import PneumoniaMNIST
 
