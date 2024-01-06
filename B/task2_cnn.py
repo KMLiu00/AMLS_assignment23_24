@@ -3,7 +3,7 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import matplotlib.pyplot as plt
 import numpy as np
-
+from keras.optimizers import Adam
 # import TensorFlow
 import tensorflow as tf
 from tensorflow.keras import layers, models
@@ -18,11 +18,11 @@ from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras.regularizers import l1, l2
 
 # load train dataset
-train_dataset = PathMNIST(split='train', download=True)
+train_dataset = PathMNIST(split='train')
 # validation train dataset
-val_dataset = PathMNIST(split='train', download=True)
+val_dataset = PathMNIST(split='val')
 # test dataset
-test_dataset = PathMNIST(split='train', download=True)
+test_dataset = PathMNIST(split='test')
 
 
 # function for process data
@@ -52,25 +52,25 @@ model = models.Sequential([
 
     # first layer, 32 filters, each with 3*3 kernel, ReLU activation function,
     # L2 regularization with a coefficient of 0.001,  2*2 pool size.
-    layers.Conv2D(64, (3, 3), activation='relu', input_shape=(28, 28, 3), kernel_regularizer=l2(0.001)),
+    layers.Conv2D(64, (3, 3), activation='leaky_relu', input_shape=(28, 28, 3), kernel_regularizer=l2(0.001)),
     layers.MaxPooling2D((2, 2)),
 
     # second layer
-    layers.Conv2D(64, (3, 3), activation='relu'),
+    layers.Conv2D(128, (3, 3), activation='leaky_relu'),
     layers.MaxPooling2D((2, 2)),
 
     # third layer
-    layers.Conv2D(64, (3, 3), activation='relu'),
+    layers.Conv2D(128, (3, 3), activation='leaky_relu'),
     layers.MaxPooling2D((2, 2)),
 
     # flatten layer, flattens the input to a one-dimensional array
     layers.Flatten(),
 
-    #  dropout rate of 0.5 to prevent overfitting
-    layers.Dropout(0.5),
+    #  sets randomly set 70% neurons to zero
+    layers.Dropout(0.70),
 
     # dense Layer with regularization
-    layers.Dense(64, activation='relu', kernel_regularizer=l2(0.001)),
+    layers.Dense(128, activation='leaky_relu', kernel_regularizer=l2(0.001)),
 
     # output layer, 1 output for binary classification
     layers.Dense(9, activation='softmax')
@@ -81,20 +81,20 @@ model.summary()
 
 # define optimizer, loss, metrics
 model.compile(
-    optimizer='adam',  # optimizer
+    optimizer = Adam (learning_rate=0.0005), # optimizer
     loss='sparse_categorical_crossentropy',  # loss function
     metrics=['accuracy']  # metrics function
 )
 
-# early stopper, if validation accuracy stop improving for 5 times，it will stop the training
-early_stopper = EarlyStopping(monitor='val_loss', patience=15)
+# early stopper, if validation accuracy stop improving for 8 times，it will stop the training
+early_stopper = EarlyStopping(monitor='val_loss', patience=8)
 
 # train the model
 history = model.fit(
     train_images, train_labels,
-    epochs=50,  # go over the full dataset for 80 times, but it is controlled by early stop
+    epochs=80,  # go over the full dataset for 80 times, but it is controlled by early stop
     validation_data=(val_images, val_labels),
-    batch_size=64,  # batch_size
+    batch_size=128,  # batch_size
     callbacks=[early_stopper]  # callback for early stopping
 )
 
@@ -122,6 +122,7 @@ plt.xlabel("Epoch")
 plt.ylabel("Accuracy")
 plt.title('Training and Validation Accuracy')
 plt.legend()
+plt.show()
 
 # plot loss curve
 plt.figure()
@@ -131,5 +132,4 @@ plt.xlabel("Epoch")
 plt.ylabel("Loss")
 plt.title('Training and Validation Loss')
 plt.legend()
-
 plt.show()

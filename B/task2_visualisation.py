@@ -7,7 +7,7 @@ from medmnist import PathMNIST
 
 
 # load train dataset
-train_dataset = PathMNIST(split='train', download=True)
+train_dataset = PathMNIST(split='train')
 
 # print the structure of train_dataset
 print(train_dataset)

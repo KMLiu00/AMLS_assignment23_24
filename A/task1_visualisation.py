@@ -7,7 +7,7 @@ from medmnist import PneumoniaMNIST
 
 
 # load train dataset
-train_dataset = PneumoniaMNIST(split='train', download=True)
+train_dataset = PneumoniaMNIST(split='train')
 
 # print the structure of train_dataset
 print(train_dataset)

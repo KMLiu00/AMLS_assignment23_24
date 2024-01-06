@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 # remove unnecessary messages from tensorflow
 import os
+from keras.optimizers import Adam
+
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 # import TensorFlow
@@ -19,11 +21,11 @@ from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras.regularizers import l1, l2
 
 # load train dataset
-train_dataset = PneumoniaMNIST(split='train', download=True)
+train_dataset = PneumoniaMNIST(split='train')
 # validation train dataset
-val_dataset = PneumoniaMNIST(split='train', download=True)
+val_dataset = PneumoniaMNIST(split='val')
 # test dataset
-test_dataset = PneumoniaMNIST(split='train', download=True)
+test_dataset = PneumoniaMNIST(split='test')
 
 
 # function for process data
@@ -53,7 +55,7 @@ model = models.Sequential([
 
     # first layer, 32 filters, each with 3*3 kernel, ReLU activation function,
     # L2 regularization with a coefficient of 0.001,  2*2 pool size.
-    layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1), kernel_regularizer=l2(0.001)),
+    layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1), kernel_regularizer=l2(0.01)),
     layers.MaxPooling2D((2, 2)),
 
     # second layer
@@ -61,17 +63,17 @@ model = models.Sequential([
     layers.MaxPooling2D((2, 2)),
 
     # third layer
-    layers.Conv2D(64, (3, 3), activation='relu'),
-    layers.MaxPooling2D((2, 2)),
+    # layers.Conv2D(64, (3, 3), activation='relu'),
+    # layers.MaxPooling2D((2, 2)),
 
     # flatten layer, flattens the input to a one-dimensional array
     layers.Flatten(),
 
-    #  dropout rate of 0.5 to prevent overfitting
-    layers.Dropout(0.5),
+    #  sets randomly set 60% neurons to zero
+    layers.Dropout(0.60),
 
     # dense Layer with regularization
-    layers.Dense(64, activation='relu', kernel_regularizer=l2(0.001)),
+    layers.Dense(64, activation='relu', kernel_regularizer=l2(0.01)),
 
     # output layer, 1 output for binary classification
     layers.Dense(1, activation='sigmoid')
@@ -82,7 +84,7 @@ model.summary()
 
 # define optimizer, loss, metrics
 model.compile(
-    optimizer='adam',  # optimizer
+    optimizer=Adam(learning_rate=0.001),  # optimizer
     loss='binary_crossentropy',  # loss function
     metrics=['accuracy']  # metrics function
 )
@@ -93,7 +95,7 @@ early_stopper = EarlyStopping(monitor='val_loss', patience=5)
 # train the model
 history = model.fit(
     train_images, train_labels,
-    epochs=80,  # go over the full dataset for 80 times, but it is controlled by early stop
+    epochs=50,  # go over the full dataset for 80 times, but it is controlled by early stop
     validation_data=(val_images, val_labels),
     batch_size=32,  # batch_size
     callbacks=[early_stopper]  # callback for early stopping
@@ -123,6 +125,7 @@ plt.xlabel("Epoch")
 plt.ylabel("Accuracy")
 plt.title('Training and Validation Accuracy')
 plt.legend()
+plt.show()
 
 # plot loss curve
 plt.figure()
@@ -132,5 +135,4 @@ plt.xlabel("Epoch")
 plt.ylabel("Loss")
 plt.title('Training and Validation Loss')
 plt.legend()
-
 plt.show()
