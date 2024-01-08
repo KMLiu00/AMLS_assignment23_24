@@ -141,32 +141,3 @@ plt.ylabel("Loss")
 plt.title('Training and Validation Loss')
 plt.legend()
 plt.show()
-
-
-
-
-real_model = Sequential()
-
-base_model = ResNet50(weights='imagenet',
-                      include_top=False,
-                      input_shape=(32, 32, 3),
-                      classes=9)
-# 冻结ResNet50模型的层
-for layer in base_model.layers:
-    layer.trainable = False
-
-# 添加自定义层
-real_model.add(base_model.output)
-real_model.add(GlobalAveragePooling2D())
-real_model.add(Flatten())
-real_model.add(Dense(1024, activation='relu'))
-real_model.add(Dense(9, activation='softmax'))# 假设有9个类别
-
-# 构建最终模型
-real_model.summary()
-
-# 编译模型
-
-real_model.compile(optimizer=Adam(learning_rate=0.001),
-                   loss='categorical_crossentropy',
-                   metrics=['accuracy'])
