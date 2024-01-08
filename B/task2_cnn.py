@@ -8,21 +8,23 @@ from keras.optimizers import Adam
 import tensorflow as tf
 from tensorflow.keras import layers, models
 
-# import PathMNIST
-from medmnist import PathMNIST
-
 # import early stopping
 from tensorflow.keras.callbacks import EarlyStopping
 
 # import regularization
 from tensorflow.keras.regularizers import l1, l2
 
+# import PathMNIST
+from medmnist import PathMNIST
+data_flag = 'pathmnist'
+download = True
+
 # load train dataset
-train_dataset = PathMNIST(split='train')
+train_dataset = PathMNIST(split='train', download=download)
 # validation train dataset
-val_dataset = PathMNIST(split='val')
+val_dataset = PathMNIST(split='val', download=download)
 # test dataset
-test_dataset = PathMNIST(split='test')
+test_dataset = PathMNIST(split='test', download=download)
 
 
 # function for process data
