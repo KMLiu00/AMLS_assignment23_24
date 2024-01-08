@@ -4,10 +4,10 @@ import numpy as np
 
 # import PneumoniaMNIST
 from medmnist import PneumoniaMNIST
-
-
+data_flag = 'Pneumoniamnist'
+download = True
 # load train dataset
-train_dataset = PneumoniaMNIST(split='train')
+train_dataset = PneumoniaMNIST(split='train', download=download)
 
 # print the structure of train_dataset
 print(train_dataset)

@@ -3,11 +3,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # import PneumoniaMNIST
+
 from medmnist import PathMNIST
 
-
+from medmnist import PathMNIST
+data_flag = 'pathmnist'
+download = True
 # load train dataset
-train_dataset = PathMNIST(split='train')
+train_dataset = PathMNIST(split='train', download=download)
 
 # print the structure of train_dataset
 print(train_dataset)

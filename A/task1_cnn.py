@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 # remove unnecessary messages from tensorflow
 import os
-from keras.optimizers import Adam
+from tensorflow.keras.optimizers import Adam
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 

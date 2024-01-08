@@ -3,7 +3,7 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import matplotlib.pyplot as plt
 import numpy as np
-from keras.optimizers import Adam
+from tensorflow.keras.optimizers import Adam
 # import TensorFlow
 import tensorflow as tf
 from tensorflow.keras import layers, models
