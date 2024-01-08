@@ -82,3 +82,35 @@ history = model.fit(
 test_loss, test_accuracy = model.evaluate(test_images, test_labels)
 print("Test accuracy:", test_accuracy)
 print("Test loss:", test_loss)
+
+# plotting
+# extract train accuracy and validation accuracy
+acc = history.history['accuracy']
+val_acc = history.history['val_accuracy']
+
+# extract train loss and validation loss
+
+loss = history.history['loss']
+val_loss = history.history['val_loss']
+
+epochs = range(1, len(acc) + 1)  # length is from 0, so need to add 1
+
+# plot accuracy curve
+plt.figure()
+plt.plot(epochs, acc, 'bo', label='Training acc')
+plt.plot(epochs, val_acc, 'r', label='Validation acc')
+plt.xlabel("Epoch")
+plt.ylabel("Accuracy")
+plt.title('Training and Validation Accuracy')
+plt.legend()
+plt.show()
+
+# plot loss curve
+plt.figure()
+plt.plot(epochs, loss, 'bo', label='Training loss')
+plt.plot(epochs, val_loss, 'r', label='Validation loss')
+plt.xlabel("Epoch")
+plt.ylabel("Loss")
+plt.title('Training and Validation Loss')
+plt.legend()
+plt.show()
