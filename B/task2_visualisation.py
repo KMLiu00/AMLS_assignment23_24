@@ -79,7 +79,7 @@ for i in range(10):  # 10 times loop for printing 10 images per row
 
     plt.subplot(9, 10, i + 81)
     plt.imshow(background_images[i].squeeze())
-    plt.title("colorectal adenocarcinoma epithelium")
+    plt.title("Colorectal adenocarcinoma epithelium")
     plt.axis('off')
 
 plt.show()
