@@ -1,236 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d4fd552-0cd6-404c-9292-13c92d5a02cd" name="Changes" comment="move tasks to subfolders">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/A/task1_cnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/A/task1_cnn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AMLS_assignment_code.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" />
+    <list default="true" id="83284113-340f-4833-b3e1-6252f4ccc774" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/AMLS_assignment_code.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main..py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/A/task1_cnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/A/task1_cnn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/B/task2_cnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/B/task2_cnn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B/task2_resnet50.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="2aPvsmOt4eYrSEKo6ii0XVJOnXC" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectId" id="2aoalvsIYvxSiYbeYNARpWUHPjc" />
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/UCL/AMLS Assessment/AMLS_assignment_code&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="AMLS_assignment_code" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7d4fd552-0cd6-404c-9292-13c92d5a02cd" name="Changes" comment="" />
-      <created>1704233237714</created>
+      <changelist id="83284113-340f-4833-b3e1-6252f4ccc774" name="Changes" comment="" />
+      <created>1704987540881</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1704233237714</updated>
-      <workItem from="1704233239118" duration="334000" />
-      <workItem from="1704233587594" duration="2105000" />
-      <workItem from="1704235754727" duration="10757000" />
-      <workItem from="1704260674846" duration="25532000" />
-      <workItem from="1704480436198" duration="6472000" />
-      <workItem from="1704487446839" duration="1744000" />
-      <workItem from="1704489256450" duration="2644000" />
-      <workItem from="1704493305604" duration="54000" />
-      <workItem from="1704493416161" duration="222000" />
-      <workItem from="1704493647022" duration="175000" />
-      <workItem from="1704493890583" duration="4549000" />
-      <workItem from="1704498516791" duration="30000" />
-      <workItem from="1704498808534" duration="4912000" />
-      <workItem from="1704503779352" duration="1431000" />
-      <workItem from="1704542524529" duration="3009000" />
+      <updated>1704987540881</updated>
+      <workItem from="1704987542002" duration="305000" />
     </task>
-    <task id="LOCAL-00001" summary="testing">
-      <created>1704234190981</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1704234190981</updated>
-    </task>
-    <task id="LOCAL-00002" summary="testing">
-      <created>1704234210717</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1704234210717</updated>
-    </task>
-    <task id="LOCAL-00003" summary="testing">
-      <created>1704235765828</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1704235765828</updated>
-    </task>
-    <task id="LOCAL-00004" summary="testing">
-      <created>1704235774341</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1704235774341</updated>
-    </task>
-    <task id="LOCAL-00005" summary="update">
-      <created>1704238896387</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1704238896387</updated>
-    </task>
-    <task id="LOCAL-00006" summary="update">
-      <created>1704250301169</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1704250301169</updated>
-    </task>
-    <task id="LOCAL-00007" summary="move tasks to subfolders">
-      <created>1704999101052</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1704999101052</updated>
-    </task>
-    <task id="LOCAL-00009" summary="update">
-      <created>1704329334192</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1704329334192</updated>
-    </task>
-    <task id="LOCAL-00010" summary="update">
-      <created>1704330010088</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1704330010088</updated>
-    </task>
-    <task id="LOCAL-00011" summary="update">
-      <created>1704484765408</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1704484765408</updated>
-    </task>
-    <task id="LOCAL-00012" summary="update">
-      <created>1704494520053</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1704494520053</updated>
-    </task>
-    <task id="LOCAL-00013" summary="update">
-      <created>1704496290870</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1704496290870</updated>
-    </task>
-    <task id="LOCAL-00014" summary="update">
-      <created>1704501617946</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1704501617946</updated>
-    </task>
-    <task id="LOCAL-00015" summary="update">
-      <created>1704545300731</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1704545300731</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="testing" />
-    <MESSAGE value="update" />
-    <MESSAGE value="move tasks to subfolders" />
-    <option name="LAST_COMMIT_MESSAGE" value="move tasks to subfolders" />
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/AMLS_assignment_code$2test.coverage" NAME="2test Coverage Results" MODIFIED="1704996000185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/AMLS_assignment_code$main_.coverage" NAME="main. Coverage Results" MODIFIED="1704989714095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/AMLS_assignment_code$task2_cnn.coverage" NAME="task2_cnn Coverage Results" MODIFIED="1704995446345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/B" />
-    <SUITE FILE_PATH="coverage/AMLS_assignment_code$task2_resnet50.coverage" NAME="task2_resnet50 Coverage Results" MODIFIED="1704676629475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/B" />
-    <SUITE FILE_PATH="coverage/AMLS_assignment_code$main.coverage" NAME="main Coverage Results" MODIFIED="1704995795609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/AMLS_assignment_code$task1_visualisation.coverage" NAME="task1_visualisation Coverage Results" MODIFIED="1704990600398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/A" />
-    <SUITE FILE_PATH="coverage/AMLS_assignment_code$task1_cnn.coverage" NAME="task1_cnn Coverage Results" MODIFIED="1704548279893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/A" />
-    <SUITE FILE_PATH="coverage/AMLS_assignment_code$task2_cnn.coverage" NAME="task2_cnn Coverage Results" MODIFIED="1704545200910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/B" />
-    <SUITE FILE_PATH="coverage/AMLS_assignment_code$task1_visualisation.coverage" NAME="task1_visualisation Coverage Results" MODIFIED="1704238128835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AMLS_assignment_code$main_.coverage" NAME="main. Coverage Results" MODIFIED="1704987812181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
