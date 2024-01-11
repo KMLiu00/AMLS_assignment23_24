@@ -34,7 +34,7 @@ def plot_history(history, task_name):
     plt.subplot(1, 2, 1)
     plt.plot(history['accuracy'], 'bo', label='Training Accuracy')
     plt.plot(history['val_accuracy'], 'r', label='Validation Accuracy')
-    plt.title(f'{task_name} Training and Validation Accuracy')
+    plt.title(f'{task_name} Training and Validation Accuracy VS Epoch')
     plt.xlabel('Epoch')
     plt.ylabel('Accuracy')
     plt.xticks(range(0, len(history['accuracy']), 10))  # scale of x-axis is 10
@@ -44,7 +44,7 @@ def plot_history(history, task_name):
     plt.subplot(1, 2, 2)
     plt.plot(history['loss'], 'bo', label='Training Loss')
     plt.plot(history['val_loss'], 'r', label='Validation Loss')
-    plt.title(f'{task_name} Training and Validation Loss')
+    plt.title(f'{task_name} Training and Validation Loss VS Epoch')
     plt.xlabel('Epoch')
     plt.ylabel('Loss')
     plt.xticks(range(0, len(history['loss']), 10))  # scale of x-axis is 10

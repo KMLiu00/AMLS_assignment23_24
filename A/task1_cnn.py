@@ -1,4 +1,5 @@
 # import PneumoniaMNIST
+from keras.utils import to_categorical
 from medmnist import PneumoniaMNIST
 
 # import Math Tools
@@ -16,7 +17,7 @@ from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras.regularizers import l2
 
 
-def preprocess_dataset(dataset):
+def preprocess_dataset(path, split):
     dataset = PneumoniaMNIST(split=split, download=False, root=path)
     images = []
     labels = []
@@ -28,11 +29,11 @@ def preprocess_dataset(dataset):
         labels.append(label)
 
     images = np.array(images)  # convert the list of image to numpy format
-    labels = np.array(labels)  # extract the list of labels to numpy format
+    labels = np.array(labels) # extract the list of labels to numpy format
 
     return images, labels
 
-# convolutional neural network
+
 def build_model():
     model = models.Sequential([
 
@@ -67,9 +68,6 @@ def build_model():
     return model
 
 
-
-
-
 def run(path):
     train_images, train_labels = preprocess_dataset(path, 'train')
     val_images, val_labels = preprocess_dataset(path, 'val')
@@ -84,7 +82,7 @@ def run(path):
         validation_data=(val_images, val_labels),
         batch_size=32,  # batch_size
         callbacks=[early_stopper]
-    )
+        )
 
     test_loss, test_accuracy = model.evaluate(test_images, test_labels)
 
