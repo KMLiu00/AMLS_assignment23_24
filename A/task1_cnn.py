@@ -67,8 +67,7 @@ def build_model():
     return model
 
 
-# early stopper, if validation accuracy stop improving for 5 times，it will stop the training
-early_stopper = EarlyStopping(monitor='val_loss', patience=5)
+
 
 
 def run(path):
